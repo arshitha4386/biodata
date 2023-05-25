@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Island+Moments&family=Lora&family=Merriweather:wght@300&family=Playfair+Display:ital@0;1&family=Poppins:ital,wght@0,300;0,900;1,100&family=Roboto:ital,wght@0,100;0,300;1,100&family=Solway&display=swap');
+
+.title{
+    font-family: 'Solway', serif;
+}
+
+body{
+    background-image: url(https://cms-assets.tutsplus.com/cdn-cgi/image/width=630/uploads/users/1500/posts/29210/image/51.jpg);
+    background-repeat: no-repeat;
+    background-position: cover;
+
+}
+nav{
+    background-color: rgb(243, 114, 27);
+}
+
+
+.deco{
+    text-decoration: underline;
+   
+}

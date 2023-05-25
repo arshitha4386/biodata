@@ -1,0 +1,72 @@
+<!-- Image and text -->
+<nav class="navbar navbar-light fixed-top title ">
+    <a class="navbar-brand " href="#">
+      <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/biodata-5-198039.png" width="70" height="70" class="d-inline-flex align-top ms-5" alt="">
+      <span class="ms-2 text-white p-2"><b> Biodata</b></span>
+    </a>
+  </nav>
+  
+  
+  <h2 class="text-center text-success title deco" style="margin-top: 130px;">Biographical data of Clients</h2>
+  <p class="p-5 title mt-2" ><b>Dummy data :</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, natus optio. Inventore minus culpa facere blanditiis accusamus, vitae quam, tempore labore at cupiditate hic sit ex incidunt doloribus! A, quam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, facilis perferendis eligendi eos quo inventore? Eos ipsa libero odio modi saepe ullam, veniam cum nobis aliquam, nam at, natus praesentium? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia tempora molestiae eligendi, ipsum eveniet veritatis nisi repellat molestias dignissimos adipisci minus, dolorum sunt eius voluptas repudiandae ea doloremque unde est.</p>
+
+
+  <div class="row mt-5 ms-5">
+    <div class="col-12">
+        <input (keyup)="search($event)" type="text" class="form-control mb-5 w-50 border border-success shadow-none" placeholder="Search Firstname">
+    </div>
+  </div>
+ 
+  <div class="container title mb-3">
+  <div class="row">
+    <div class="col-md-6 mb-4" *ngFor="let contact of allContacts | filter :searchKey: 'firstName'">
+      <div class="card border border-warning list-group-item-warning">
+            <div class="row ">
+               <div class="card-block col-12">
+                <h4 class="card-title text-center mt-2 text-success"><b>{{contact.firstName}} {{contact.lastName}}</b></h4>
+                <h6 class="card-subtitle text-danger text-center ">{{contact.maidenName}}</h6>
+                <hr class="text-warning">
+               </div>
+            </div>
+            <div class="row">
+              <div class="col-md-1"></div>
+              <div class="col-md-4 mt-2">
+                 <div class="card-block border border-warning">
+                  <img [src]="contact.image" alt="Card image" height="200px" width="150px"class="m-2 ">
+                 </div>
+              </div>
+              <div class="col-md-7 ">
+                <div class="card ms-2 mt-3 me-2" width="100%">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><i class="fa-solid fa-cake-candles text-danger "></i>&nbsp;<b>birth</b> : &nbsp; {{contact.birthDate}}  </li>
+                    <li class="list-group-item"><i class="fa-solid fa-venus-mars text-danger "></i>&nbsp;<b>Gender</b> : &nbsp;{{contact.gender}} </li>
+                    <li class="list-group-item"><i class="fa-solid fa-droplet text-danger"></i>&nbsp; <b>Blood</b> :  &nbsp; {{contact.bloodGroup}} </li>
+                    <li class="list-group-item"><i class="fa-solid fa-phone text-danger "></i>&nbsp; <b>Phone</b> :  &nbsp; {{contact.phone}} </li>
+                    <li class="list-group-item"><i class="fa-solid fa-envelope text-danger "></i>&nbsp; <b>Email</b>:  &nbsp; {{contact.email}} </li>
+                  </ul>
+                </div>
+              </div>  
+              
+             
+            </div>
+          
+          <div class="row mt-2">
+            <div class="card-block col-12">
+              <div class="card m-2">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><i class="fa-solid fa-lock text-danger"></i>&nbsp; <b>Username</b> : &nbsp; {{contact.username}}</li>
+                  <li class="list-group-item"><i class="fa-solid fa-key text-danger"></i>&nbsp; <b>Password</b> : &nbsp; {{contact.password}}</li>
+                  <li class="list-group-item"><i class="fa-solid fa-tree-city text-danger"></i>&nbsp; <b>Address</b> : &nbsp; {{contact.address.address}}, {{contact.address.city}}</li>
+                  <li class="list-group-item"><i class="fa-solid fa-building-columns text-danger"></i>&nbsp; <b>University</b> : &nbsp; {{contact.university}}</li>
+                  <li class="list-group-item"><i class="fa-solid fa-building text-danger"></i>&nbsp; <b>Company</b> : &nbsp; {{contact.company.name}}</li>
+                  <li class="list-group-item"><i class="fa-solid fa-user-tie text-danger"></i>&nbsp; <b>Job</b> : &nbsp; {{contact.company.title}}</li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+     
+    </div>
+  </div>
